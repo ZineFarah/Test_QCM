@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   return (
     <div>
-      <h1>Bienvenue dans mon projet React !</h1>
+      <h1>Bienvenue dans le projet de Chayma et Farah!</h1>
     </div>
   );
 }
