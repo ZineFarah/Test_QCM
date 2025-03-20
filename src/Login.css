@@ -6,31 +6,40 @@
     font-family: "Arial", sans-serif;
   }
   
-  /* Conteneur principal avec un fond gris clair */
+  /* Assurer que le body et html prennent toute la hauteur et largeur de l'écran */
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Conteneur principal avec un fond gris clair, couvrant toute la fenêtre */
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #dae0e7; /* Couleur de l'interface derrière */
+    height: 100vh; /* La hauteur prend toute la hauteur de l'écran */
+    width: 100vw; /* La largeur prend toute la largeur de l'écran */
+    background-color: #DAE0E7; /* Fond gris */
+    overflow: hidden; /* Empêche les barres de défilement */
   }
   
-  /* Rectangle blanc centré */
+  /* Rectangle blanc centré, avec un peu plus petit que la fenêtre mais assez spacieux */
   .login-box {
     display: flex;
     flex-direction: row;
-    width: 700px; /* Plus petit que l'interface complète */
-    height: 450px; /* Ajusté pour être plus compact */
+    width: 1440px; /* Largeur ajustée pour être un peu plus petite */
+    height: 1000px; /* Hauteur ajustée pour être plus compacte */
     background: #ffffff; /* Couleur du rectangle */
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    padding: 20px; /* Ajout de padding pour éviter que les éléments ne collent aux bords */
   }
   
   /* Partie gauche (formulaire) */
   .left-side {
     flex: 1;
-    padding: 30px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,13 +56,13 @@
   
   /* Image */
   .illustration {
-    width: 80%;
-    max-width: 220px;
+    width: 100%; /* Taille ajustée pour l'illustration */
+    max-width: 400px;
   }
   
   /* Titres */
   .title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: gray;
     margin-right: 20px;
@@ -61,14 +70,15 @@
   }
   
   .title.active {
-    color: #1d4ed8;
+    color: #0B3164;
     font-weight: bold;
   }
   
   /* Champs de saisie */
   .input-group {
     position: relative;
-    margin: 15px 0;
+    margin: 10px 0;
+    
   }
   
   .input-group input {
@@ -81,7 +91,7 @@
   }
   
   .input-group input:focus {
-    border-color: #1d4ed8;
+    border-color: ##0B3164;
   }
   
   /* Icône œil */
@@ -97,7 +107,7 @@
   .forgot-password {
     display: block;
     margin-top: 10px;
-    color: #1d4ed8;
+    color: #0B3164;
     font-size: 13px;
     text-decoration: none;
   }
@@ -110,7 +120,7 @@
   .captcha {
     display: flex;
     align-items: center;
-    margin: 15px 0;
+    margin: 10px 0;
   }
   
   .captcha input {
@@ -125,7 +135,7 @@
   .login-btn {
     width: 100%;
     padding: 10px;
-    background: #1d4ed8;
+    background: #0B3164;
     color: white;
     border: none;
     border-radius: 5px;
@@ -135,6 +145,6 @@
   }
   
   .login-btn:hover {
-    background: #153d90;
+    background: #0B3164;
   }
   
