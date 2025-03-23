@@ -59,3 +59,21 @@ body{
 h1, p {
   color: black; /* Assure que le texte est visible */
 }
+/* Pour le bouton se connecter positionné en bas à droite */
+.login-button {
+  position: absolute;
+  font-family: 'Rammetto One', sans-serif; /* Application de la police */
+  bottom: 60px;
+  right: 120px;
+  padding: 7px 28px;
+  font-size: 30px;
+  background-color: #19437A;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #4D75A2;
+}
