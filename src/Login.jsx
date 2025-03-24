@@ -11,12 +11,12 @@ const Login = () => {
           <span className="login-link">Se connecter</span>
           <span className="signup-link">S'inscrire</span>
         </div>
+        <button className="login-button">Se connecter</button>
 
-        <h1>Welcome</h1>
-        <p>Connectez-vous pour passer</p>
+        
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Login;
