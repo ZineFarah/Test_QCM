@@ -24,25 +24,26 @@ body{
   width: 2600px;
   
 }
-
+/* Conteneur du header */
 .login-header {
   display: flex;
   justify-content:flex-start;
-  gap: 130px; 
+  gap: 130px; /* Réduit l’espace entre les liens */
   position: fixed;
-  top: 70px; 
+  top: 70px; /* Place en haut du cadre blanc */
   left: 55%;
   transform: translateX(-100%);
   width: max-content;
 }
 
-
+/* Style pour "Se connecter" */
 .login-link {
   font-family: 'Rammetto One', sans-serif; 
   font-size: 35px; 
   font-weight: bold;
   color: #0B3164; 
   cursor: pointer;
+  text-decoration: underline;
 }
 
 
@@ -54,8 +55,6 @@ body{
   cursor: pointer;
 }
 
-
-.login-link:hover,
 .signup-link:hover {
   text-decoration: underline;
 }
@@ -74,7 +73,8 @@ body{
   cursor: pointer;
 }
 
-.login-button:hover {
+.login-button:hover 
+{
   background-color: #4D75A2;
 }
 .image-left {
@@ -114,6 +114,7 @@ body{
   padding: 12px;
   border-radius: 10px;
   width: 40%;
+  
 }
 
 .password-container {
@@ -126,7 +127,7 @@ body{
   padding: 12px;
   border-radius: 10px;
   width: 40%;
-  color: #000000;
+  margin-right: 10px;
 }
 .email-container input,
 .password-container input {
@@ -134,16 +135,20 @@ body{
   background: transparent;
   flex: 1;
   padding: 5px;
-  font-size: 30px;
+  font-size: 25px;
   outline: none;
+  color: black;
+  padding-left: 25px;
 }
 .password-icon,
 .email-icon {
-  font-size: 22px;  
+  font-size: 20px;  
   color: #19437A;   
-  margin-right: 12px;
+  position: absolute;
+  left: 5px; /* Ajuste la position horizontale si besoin */
+  top: 54%;
+  transform: translateY(-50%); /* Centre verticalement */
 }
-
 .password-input input
 .email-input input {
   width: 100%;
@@ -152,7 +157,6 @@ body{
   border: none;
   background: #ECF1F6;
   font-size: 25px;
-  color: #000000;
   outline: none;
 }
 
@@ -161,7 +165,9 @@ body{
   font-size: 22px;
   color: #666;
   position: absolute;
-  right: 10px;
+  right: 8px;
+  top: 55%;
+  transform: translateY(-50%); /* Centre verticalement */
   cursor: pointer;
 }
 
@@ -170,7 +176,7 @@ body{
 }
 .forgot-password {
   position: absolute;
-  right: 700px;  
+  right: 685px;  
   top: 440px;    
   font-size: 18px; 
   color: #19437A;
@@ -187,24 +193,4 @@ body{
   text-decoration: underline;
 }
 
-.password-input svg {
-  display: none; /* Cache toute icône de type SVG qui pourrait être ajoutée automatiquement */
-}
-/* Pour le bouton se connecter positionné en bas à droite */
-.login-button {
-  position: absolute;
-  font-family: 'Rammetto One', sans-serif; /* Application de la police */
-  bottom: 60px;
-  right: 120px;
-  padding: 7px 28px;
-  font-size: 30px;
-  background-color: #19437A;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-}
 
-.login-button:hover {
-  background-color: #4D75A2;
-}

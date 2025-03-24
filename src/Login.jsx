@@ -12,8 +12,9 @@ const Login = () => {
           <span className="login-link">Se connecter</span>
           <span className="signup-link">S'inscrire</span>
         </div>
+        
 
-        <div className="form-container">
+        
 
           {/* Email */}
           <div className="email-container">
@@ -32,7 +33,7 @@ const Login = () => {
             </div>
             <div className="password-input">
               <input 
-                type={showPassword ? "text" : "password"} 
+                type={showPassword ? "password" : "email"} 
                 placeholder="Mot de passe" 
               />
             </div>
@@ -43,16 +44,18 @@ const Login = () => {
               {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
             </div>
           </div>
-          {/* Mot de passe oublié */}
-          <div className="forgot-password">
-               <a href="#">Mot de passe oublié ?</a>
-          </div>
-
+          
 
           {/* Bouton Se connecter */}
           <div className="button-container">
             <button className="login-button">Se connecter</button>
         </div>
+        
+        {/* Mot de passe oublié */}
+        <div className="forgot-password">
+               <a href="#">Mot de passe oublié ?</a>
+          </div>
+
 
         {/* Images */}
         <div className="image-left">
@@ -64,7 +67,7 @@ const Login = () => {
         </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 
