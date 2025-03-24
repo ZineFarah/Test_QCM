@@ -1,5 +1,5 @@
 body{
-  background-color: #dae0e7;
+  background-image: url('./public/back.png');
   margin: 0;
   font-family: Arial, sans-serif;
   display: flex;
@@ -19,51 +19,50 @@ body{
   background-color: white;
   padding: 340px;
   border-radius: 30px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
   width: 2600px;
   
 }
-/* Conteneur du header */
+
 .login-header {
   display: flex;
   justify-content:flex-start;
-  gap: 130px; /* Réduit l’espace entre les liens */
+  gap: 130px; 
   position: fixed;
-  top: 70px; /* Place en haut du cadre blanc */
+  top: 70px; 
   left: 55%;
   transform: translateX(-100%);
   width: max-content;
 }
 
-/* Style pour "Se connecter" */
+
 .login-link {
   font-family: 'Rammetto One', sans-serif; 
-  font-size: 35px; /* Texte plus grand */
+  font-size: 35px; 
   font-weight: bold;
-  color: #0B3164; /* Bleu foncé */
+  color: #0B3164; 
   cursor: pointer;
 }
 
-/* Style pour "S'inscrire" */
+
 .signup-link {
   font-family: 'Rammetto One', sans-serif; 
-  font-size: 35px; /* Texte plus grand */
+  font-size: 35px; 
   font-weight: bold;
-  color: #8997A7; /* Gris bleu */
+  color: #8997A7; 
   cursor: pointer;
 }
 
-/* Ajout d'un effet au survol */
+
 .login-link:hover,
 .signup-link:hover {
   text-decoration: underline;
 }
 
-/* Pour le bouton se connecter positionné en bas à droite */
 .login-button {
   position: absolute;
-  font-family: 'Rammetto One', sans-serif; /* Application de la police */
+  font-family: 'Rammetto One', sans-serif; 
   bottom: 37px;
   right: 130px;
   padding: 7px 28px;
@@ -77,4 +76,117 @@ body{
 
 .login-button:hover {
   background-color: #4D75A2;
+}
+.image-left {
+  position: absolute;
+  left: -4%;
+  top: 80%;
+  transform: translateY(0%);
+  width: 330px; 
+}
+
+.image-left img {
+  width: 50%;
+  height: auto;
+}
+
+.image-right {
+  position: absolute;
+  right: 150px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 450px; 
+}
+
+.image-right img {
+  width: 100%;
+  height: auto;
+}
+
+
+.email-container {
+  position: absolute;
+  left: 200px;
+  top: 250px;
+  display: flex;
+  align-items: center;
+  background: #ECF1F6;
+  padding: 12px;
+  border-radius: 10px;
+  width: 40%;
+}
+
+.password-container {
+  position: absolute;
+  left: 200px;
+  top: 350px;
+  display: flex;
+  align-items: center;
+  background: #ECF1F6;
+  padding: 12px;
+  border-radius: 10px;
+  width: 40%;
+  color: #000000;
+}
+.email-container input,
+.password-container input {
+  border: none;
+  background: transparent;
+  flex: 1;
+  padding: 5px;
+  font-size: 30px;
+  outline: none;
+}
+.password-icon,
+.email-icon {
+  font-size: 22px;  
+  color: #19437A;   
+  margin-right: 12px;
+}
+
+.password-input input
+.email-input input {
+  width: 100%;
+  padding: 10px ;
+  border-radius: 10px;
+  border: none;
+  background: #ECF1F6;
+  font-size: 25px;
+  color: #000000;
+  outline: none;
+}
+
+
+.eye-icon {
+  font-size: 22px;
+  color: #666;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.eye-icon:hover {
+  color: #19437A;
+}
+.forgot-password {
+  position: absolute;
+  right: 700px;  
+  top: 440px;    
+  font-size: 18px; 
+  color: #19437A;
+  cursor: pointer;
+}
+
+.forgot-password a {
+  text-decoration: none;
+  color: #19437A;
+  font-weight: bold;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.password-input svg {
+  display: none; /* Cache toute icône de type SVG qui pourrait être ajoutée automatiquement */
 }
