@@ -73,9 +73,9 @@ body{
   cursor: pointer;
 }
 
-.login-button:hover 
-{
-  background-color: #4D75A2;
+.login-button:hover
+{background-color: #4d75a2;
+
 }
 .image-left {
   position: absolute;
