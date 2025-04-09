@@ -1,0 +1,57 @@
+/* Supprimer le fond gris des champs auto-remplis */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    background-color: transparent !important;
+    
+    transition: background-color 5000s ease-in-out 0s;
+}
+input:-webkit-autofill {
+  color: rgb(48, 47, 47) !important;
+  -webkit-text-fill-color: rgb(47, 47, 47) !important; /* Applique la couleur au texte auto-rempli */
+}
+
+
+
+body{
+  background-image: url('./back.png');
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.global-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+
+}
+.white-box{
+  background-color: white;
+  padding: 340px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 600px;
+  max-width: 90%;
+  
+}
+
+.image-left {
+  position: absolute;
+  left: -4%;
+  top: 80%;
+  transform: translateY(0%);
+  width: 330px; 
+}
+
+.image-left img {
+  width: 50%;
+  height: auto;
+}
+ 

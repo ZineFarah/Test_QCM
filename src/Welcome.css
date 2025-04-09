@@ -1,0 +1,173 @@
+
+.bienvenue {
+  font-family: 'Rammetto One', sans-serif; 
+  position: absolute;
+  left: 640px;  
+  top: 100px;    
+  font-size: 40px; 
+  color: #0B3164;
+  cursor: pointer;
+}
+
+.creer-test-button {
+  position: absolute;
+  font-family: 'Rammetto One', sans-serif; /* Application de la police */
+  left: 34%;
+  top: 240px;  
+  padding: 11px 156px;
+  font-size: 25px;
+  background-color: #19437A;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.ajouter-qcm-button {
+  position: absolute;
+  font-family: 'Rammetto One', sans-serif; /* Application de la police */
+  left: 34%;
+  top: 340px;  
+  padding: 11px 125px;
+  font-size: 25px;
+  background-color: #19437A;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.consulter-test-button {
+  position: absolute;
+  font-family: 'Rammetto One', sans-serif; /* Application de la police */
+  left: 34%;
+  top: 440px;  
+  padding: 11px 122px;
+  font-size: 25px;
+  background-color: #19437A;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.consulter-test-button:hover{
+  background-color: #4D75A2;
+}
+
+.creer-test-button:hover{
+  background-color: #4D75A2;
+
+}
+.ajouter-qcm-button:hover{
+  background-color: #4D75A2;
+
+}
+
+
+
+
+.img-creer-test{
+  position: absolute;
+  left: 35%;
+  top: 253px;
+  transform: translateY(0%);
+  width: 100px; 
+}
+
+.img-creer-test img {
+  width: 37%;
+  height: auto;
+}
+
+.img-ajouter-test{
+  position: absolute;
+  left: 35%;
+  top: 353px;
+  transform: translateY(0%);
+  width: 100px; 
+}
+
+.img-ajouter-test img {
+  width: 37%;
+  height: auto;
+}
+
+.img-consulter-test{
+  position: absolute;
+  left: 35%;
+  top: 453px;
+  transform: translateY(0%);
+  width: 100px; 
+}
+
+.img-consulter-test img {
+  width: 37%;
+  height: auto;
+}
+
+.account-icon {
+  position: absolute;
+  top: 60px;
+  right: 150px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #738abd;
+}
+
+.compte-back {
+  position: absolute;
+  top: 53px;
+  right: 113px;
+  transform: translateY(0%);
+  width: 100px; 
+  
+}
+.compte-back img {
+  width: 45%;
+  height: auto;
+}
+
+
+.account-icon:hover {
+  color: #0056b3;
+}
+
+
+
+.account-info {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  background-color: rgba(194, 196, 198, 0.955);
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 20px;
+  width: 250px;
+  box-shadow:0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.account-info p {
+  margin: 10px 0;
+  font-size: 16px;
+  text-align: left;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.account-info button {
+  margin-top: 10px;
+  padding: 8px;
+  width: 100%;
+  background-color: #6a7784;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.account-info button:hover {
+  background-color: #0056b3;
+}
+
+

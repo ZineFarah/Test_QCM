@@ -1,22 +1,36 @@
 import React, { useState } from "react";
 import { AiOutlineMail, AiOutlineLock, AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"; 
 import "./Login.css";
+import "./Global.css";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
+    const navigate = useNavigate(); // Hook pour la navigation
+  console.log("Login page affichée"); // Vérification
   const [showPassword, setShowPassword] = useState(false);
+ 
+
+  
+  
 
   return (
-    <div className="login-container">
-      <div className="login-box">
+    <div className="global-container">
+      <div className="white-box">
         <div className="login-header">
           <span className="login-link">Se connecter</span>
-          <span className="signup-link">S'inscrire</span>
-        </div>
-        
+          <span 
+        className="signup-link" 
+        onClick={() => navigate("/signup")} // Redirection sans <Link>
+        style={{ cursor: "pointer", color: "#8997A7" }} >
+        S'inscrire
+      </span>                
+       </div>
 
-        
+      
 
-          {/* Email */}
+        {/* Email */}
           <div className="email-container">
             <div className="email-icon">
              <AiOutlineMail  /> 
@@ -47,14 +61,15 @@ const Login = () => {
           
 
           {/* Bouton Se connecter */}
-          <div className="button-container">
-            <button className="login-button">Se connecter</button>
-        </div>
+          
+            <button className="login-button" onClick={() => navigate("/welcome")}>Se connecter</button>
+        
         
         {/* Mot de passe oublié */}
-        <div className="forgot-password">
-               <a href="#">Mot de passe oublié ?</a>
-          </div>
+        <span className="forgot-password" 
+        onClick={() => navigate("/forgotpass")}
+        style={{ cursor: "pointer", color: "#19437A" }} >Mot de passe oublié ?
+          </span>
 
 
         {/* Images */}
