@@ -17,6 +17,7 @@
   font-weight: bold;
   color: #0B3164; 
   cursor: pointer;
+  text-decoration: underline;
 }
 
 
@@ -145,9 +146,10 @@
   position: absolute;
   right: 685px;  
   top: 440px;    
-  font-size: 18px; 
+  font-size: 20px; 
   color: #19437A;
   cursor: pointer;
+  font-family: "Pridi", serif;
 }
 
 .forgot-password:hover {

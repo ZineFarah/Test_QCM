@@ -5,7 +5,7 @@ import Login from "./Login";
 import Forgotpass from "./Forgotpass";
 import Welcome from "./Welcome";
 import ManageAccount from "./ManageAccount";  // Composant pour gérer le compte
-import Logout from "./Logout";  // Composant de déconnexion
+
 
 
 function App() {
@@ -17,7 +17,6 @@ function App() {
           <Route path="/forgotpass" element={<Forgotpass />} />
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/manage-account" element={<ManageAccount />} />
-          <Route path="/logout" element={<Logout />} />
           
         </Routes>
       </Router>

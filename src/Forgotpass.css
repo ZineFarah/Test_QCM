@@ -15,11 +15,11 @@
 
 
 .forgotpass-link {
-  font-family: 'Rammetto One', sans-serif; 
+  font-family: 'Alfa Slab One', sans-serif; 
   position: absolute;
-  left: 600px;  
-  top: 150px;    
-  font-size: 26px; 
+  left: 550px;  
+  top: 100px;    
+  font-size: 40px; 
   color: #0B3164;
   cursor: pointer;
 }
@@ -68,4 +68,17 @@ margin-right: 8px;
 margin-top: 9px; /* Monte l'icône */
 margin-bottom: 5px; /* Descend l'icône */
 vertical-align: middle; /* Centre par rapport au texte */
+}.back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 30px;
+  color: #19437A;
+  cursor: pointer;
+  z-index: 20;
+  transition: color 0.3s ease;
+}
+
+.back-arrow:hover {
+  color: #0B3164;
 }

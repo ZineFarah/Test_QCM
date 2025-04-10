@@ -2,11 +2,12 @@ import React from "react";
 import { AiOutlineMail, AiOutlineLock, AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"; 
 import "./Forgotpass.css";
 import "./Global.css";
+import { FaArrowLeft } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 
 const Forgotpass = () => {
-
-
+    const navigate = useNavigate(); 
     return (
         <div className="global-container">
             <div className="white-box"> 
@@ -31,7 +32,10 @@ const Forgotpass = () => {
                     <input type="email" placeholder="Email" />
                 </div>
                 </div>
-        
+                 {/* Flèche de retour */}
+                  <div className="back-arrow" onClick={() => navigate("/")}>
+                <FaArrowLeft />
+                </div>
                  
          </div>
     

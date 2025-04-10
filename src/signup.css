@@ -16,6 +16,7 @@
     font-weight: bold;
     color: #0B3164; 
     cursor: pointer;
+    text-decoration: underline;
   }
   
 
@@ -251,9 +252,9 @@ outline: none;
 
 .login-redirect {
   position: absolute;
-  right: 500px;  
-  top: 635px;    
-  font-size: 18px; 
+  right: 450px;  
+  top: 655px;    
+  font-size: 20px; 
   color: #0B3164;
   cursor: pointer;
   font-family: "Pridi", serif; 

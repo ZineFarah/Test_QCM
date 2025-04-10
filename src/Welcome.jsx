@@ -1,5 +1,12 @@
 import React,  { useState } from "react";
-import { AiOutlineMail, AiOutlineLock, AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"; 
+import {
+  FaRegEdit,
+  FaPlusSquare,
+  FaEye,
+  FaUserCircle,
+  FaUserCog,
+  FaSignOutAlt,
+} from "react-icons/fa";
 import "./Welcome.css";
 import "./Global.css";
 
@@ -23,42 +30,44 @@ const Welcome = () => {
             <div className="white-box"> 
             <span className="bienvenue" >Bienvenue 
             </span>
-            <button className="creer-test-button">  Créer un Test       </button>
-            <button className="ajouter-qcm-button">Ajouter des QCM     </button>
-            <button className="consulter-test-button">Consulter un Test</button>
+            <button className="action-button creer-test-button">
+              <FaRegEdit className="button-icon" />
+              <span className="button-text">Créer un Test</span>
+            </button>
 
-            <div className="img-creer-test">
-            <img src="/public/creer.png" alt="Icone" />
-            </div>
+            <button className="action-button ajouter-qcm-button">
+              <FaPlusSquare className="button-icon" />
+              <span className="button-text">Ajouter des QCM</span>
+            </button>
 
-            <div className="img-ajouter-test">
-            <img src="/public/ajouter.png" alt="Icone" />
-            </div>
+            <button className="action-button consulter-test-button">
+              <FaEye className="button-icon" />
+              <span className="button-text">Consulter un Test</span>
+            </button>
+
 
             
-            <div className="img-consulter-test">
-            <img src="/public/consulter.png" alt="Icone" />
-            </div>
-
-
-            <div className="compte-back">
-            <img src="/public/compte.png" alt="Icone" />
-            </div>
             
-
-            <div>
-            {/* Icône de compte */}
-            <i className="fas fa-user account-icon" onClick={toggleAccountInfo}></i>
-
-            {/* Informations du compte */}
-            {showAccountInfo && (
+             {/* Icône du compte */}
+            <FaUserCircle className="account-icon" onClick={toggleAccountInfo} />
+              {/* Informations du compte */}
+              {showAccountInfo && (
                 <div className="account-info">
                 <p>Nom utilisateur : John Doe</p>
                 <p>Email : john.doe@example.com</p>
-                <button onClick={() => navigate("/manage-account")}>Gérer votre compte</button>
-                <button onClick={handleLogout}>Déconnecter</button>                </div>
+                <button className="account-button" onClick={() => navigate("/manage-account")}> 
+                 <FaUserCog className="account-icon-btn" />
+                  <span className="button-text">Gérer votre compte</span>
+                </button>
+
+                  <button className="account-button" onClick={handleLogout}>
+                    <FaSignOutAlt className="account-icon-btn" />
+                    <span className="button-text">Déconnecter</span>
+                  </button>
+
+              </div>
             )}
-            </div>
+            
 
            
 
@@ -67,9 +76,9 @@ const Welcome = () => {
             </div>
 
 
-
-
             </div>
+
+            
     
         </div>
 
