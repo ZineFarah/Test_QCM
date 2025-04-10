@@ -55,8 +55,8 @@ const Signup = () => {
         <select id="role" className="role-select">
           <option value="" disabled selected>Choisissez un rôle</option>
           <option value="admin">Administrateur</option>
-          <option value="generator">Générateur de test</option>
-          <option value="visitor">Vésiteur</option>
+          <option value="generator">Modérateur</option>
+          <option value="visitor">Utilisateur</option>
         </select>
       </div>
 
