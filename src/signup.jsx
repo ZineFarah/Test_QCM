@@ -8,6 +8,51 @@ import { useNavigate } from "react-router-dom";
 
 
 const Signup = () => {
+  const [nom, setNom] = useState('');
+  const [prenom, setPrenom] = useState('');
+  const [email, setEmail] = useState('');
+  const [motDePasse, setMotDePasse] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [role, setRole] = useState('');
+
+
+  const handleSignup = async () => {
+    if (motDePasse !== confirmPassword) {
+      alert("Les mots de passe ne correspondent pas !");
+      return;
+    }
+  
+    try {
+      const response = await fetch("http://localhost:5000/api/users/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nom,
+          prenom,
+          email,
+          mot_de_passe: motDePasse,
+          id_role: role === 'admin' ? 1 : role === 'generator' ? 2 : 3
+        }),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        alert("Compte créé avec succès !");
+        navigate("/welcome"); // Retour vers Login
+      } else {
+        alert(data.message || "Erreur lors de la création du compte.");
+      }
+    } catch (error) {
+      console.error("Erreur requête :", error);
+      alert("Erreur serveur !");
+    }
+  };
+  
+
+
  
   const navigate = useNavigate(); // Hook pour la navigation
 
@@ -29,14 +74,14 @@ const Signup = () => {
       <div className="nom-container">
            
             <div className="nom-input">
-            <input type="text" placeholder="Nom " />
+            <input type="text" placeholder="Nom" value={nom} onChange={(e) => setNom(e.target.value)} />
 
             </div>
             </div>
             <div className="prenom-container">
            
             <div className="prenom-input">
-            <input type="text" placeholder="Prenom " />
+            <input type="text" placeholder="Prenom" value={prenom} onChange={(e) => setPrenom(e.target.value)} />
 
             </div>
        </div>
@@ -46,14 +91,14 @@ const Signup = () => {
              <AiOutlineMail  /> 
             </div>
             <div className="mail-input">
-            <input type="email" placeholder="Email" />
-          </div>
+            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            </div>
        </div>
       {/* Role*/}
       <div className="role-container">
         <label htmlFor="role" className="role-label">Rôle : </label>
-        <select id="role" className="role-select">
-          <option value="" disabled selected>Choisissez un rôle</option>
+        <select value={role} onChange={(e) => setRole(e.target.value)} id="role" className="role-select">
+        <option value="" disabled selected>Choisissez un rôle</option>
           <option value="admin">Administrateur</option>
           <option value="generator">Modérateur</option>
           <option value="visitor">Utilisateur</option>
@@ -67,8 +112,10 @@ const Signup = () => {
             </div>
             <div className="password1-input">
               <input 
-                type={showPassword ? "password" : "email"} 
+                type={showPassword ? "text" : "password"} 
                 placeholder="Mot de passe" 
+                value={motDePasse}
+                onChange={(e) => setMotDePasse(e.target.value)}
               />
             </div>
             <div 
@@ -87,8 +134,10 @@ const Signup = () => {
             </div>
             <div className="passwordconfirm-input">
               <input 
-                type={showConfirmPassword ? "password" : "email"} 
+                type={showConfirmPassword ? "text" : "password"} 
                 placeholder="Confirmer Mot de passe" 
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </div>
             <div 
@@ -109,7 +158,7 @@ const Signup = () => {
         </div>
 
          {/* Bouton S'inscrire */}
-            <button className="signup-button" onClick={() => navigate("/welcome")}>Créer compte</button>
+         <button className="signup-button" onClick={handleSignup}>Créer compte</button>
         
         <div className="login-redirect">
           <span onClick={() => navigate("/")} // Redirection sans <Link>
