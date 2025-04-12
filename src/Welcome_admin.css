@@ -1,0 +1,130 @@
+
+.bienvenue2 {
+    font-family: 'Alfa Slab One', sans-serif; 
+    position: absolute;
+    left: 590px;  
+    top: 60px;    
+    font-size: 55px; 
+    color: #0B3164;
+    cursor: pointer;
+  }
+  
+  .creer-test-button2 {
+    position: absolute;
+    font-family: 'Rammetto One', sans-serif; /* Application de la police */
+    left: 34%;
+    top: 200px;  
+    padding: 11px 100px;
+    font-size: 25px;
+    background-color: #19437A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .ajouter-qcm-button2 {
+    position: absolute;
+    font-family: 'Rammetto One', sans-serif; /* Application de la police */
+    left: 34%;
+    top: 300px;  
+    padding: 11px 100px;
+    font-size: 25px;
+    background-color: #19437A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .consulter-test-button2 {
+    position: absolute;
+    font-family: 'Rammetto One', sans-serif; /* Application de la police */
+    left: 34%;
+    top: 400px;  
+    padding: 11px 100px;
+    font-size: 25px;
+    background-color: #19437A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .supprimer-test-button2 {
+    position: absolute;
+    font-family: 'Rammetto One', sans-serif; /* Application de la police */
+    left: 34%;
+    top: 500px;  
+    padding: 11px 100px;
+    font-size: 25px;
+    background-color: #19437A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .gérer-utilisateurs-button2 {
+    position: absolute;
+    font-family: 'Rammetto One', sans-serif; /* Application de la police */
+    left: 34%;
+    top: 600px;  
+    padding: 11px 100px;
+    font-size: 25px;
+    background-color: #19437A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .consulter-test-button2:hover{
+    background-color: #4D75A2;
+  }
+  
+  .creer-test-button2:hover{
+    background-color: #4D75A2;
+  
+  }
+  .ajouter-qcm-button2:hover{
+    background-color: #4D75A2;
+  
+  }
+  .supprimer-test-button2:hover{
+    background-color: #4D75A2;
+  
+  }
+  .gérer-utilisateurs-button2:hover{
+    background-color: #4D75A2;
+  
+  }
+  
+  
+  .action-button2 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px; /* pas d'espace par défaut */
+    font-family: 'Rammetto One', sans-serif;
+    background-color: #19437A;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 11px 40px;
+    width: 500px; /* fixe la largeur si tu veux que tout soit aligné */
+  }
+  
+  .button-icon2 {
+    position: absolute;
+    left: 45px;
+    font-size: 28px;
+  }
+  
+  .button-text2 {
+    width: 100%;
+    text-align: justify;
+    padding-left: 60px; 
+  }
+  
+  
